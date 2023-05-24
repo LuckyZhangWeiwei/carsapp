@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import { Navbar } from "../../components/NavBar/inex";
+import { TopSection } from "./topSection";
 
 const PageContainer = styled.div`
   ${tw`
@@ -38,6 +39,7 @@ export function HomePage() {
   return (
     <PageContainer>
       <Navbar />
+      <TopSection />
       <ul className="divide-y divide-gray-200">
         {people.map((person) => (
           <li key={person.email} className="py-4 flex">

@@ -24,7 +24,8 @@ const NavItem = styled.li<{ menu?: any }>`
     transition
     duration-300
     ease-in-out
-    hover:text-gray-700
+    hover:text-gray-500
+    focus:(text-gray-500)
   `};
 
   ${({ menu }) =>
@@ -34,7 +35,7 @@ const NavItem = styled.li<{ menu?: any }>`
       text-white
       text-xl
       mb-3
-      focus:(text-gray-700)
+      focus:(text-gray-500)
     `};
     `};
 `;
