@@ -133,6 +133,14 @@ const StandaloneCar = styled.div`
   }
 `;
 
+const ButtonsContainer = styled.div`
+  ${tw`
+  flex
+  flex-wrap
+  mt-4
+  `}
+`;
+
 export function TopSection() {
   return (
     <TopSectionContainer>
@@ -143,15 +151,17 @@ export function TopSection() {
           at the best price for you and get the best quality cars for as long as
           you like
         </Description>
-        <Button text="Book Your Ride" />
-        <Button text="Sell Your Car" theme="filled" />
+        <ButtonsContainer>
+          <Button text="Book Your Ride" />
+          <Button text="Sell Your Car" theme="filled" />
+        </ButtonsContainer>
       </LeftContainer>
       <RightContainer>
         <BlobContainer>
-          <img src={BlobImg}></img>
+          <img src={BlobImg} />
         </BlobContainer>
         <StandaloneCar>
-          <img src={MclareCarImg}></img>
+          <img src={MclareCarImg} />
         </StandaloneCar>
       </RightContainer>
     </TopSectionContainer>

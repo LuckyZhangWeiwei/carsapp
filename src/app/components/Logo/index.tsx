@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components"
 import CarLogoImg from "../../../assets/images/car-logo.png";
 import tw from "twin.macro";
 

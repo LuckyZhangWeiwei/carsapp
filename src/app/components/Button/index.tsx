@@ -26,6 +26,7 @@ const BaseButton = styled.button`
     duration-200
     ease-in-out
     m-1
+    w-64
   `};
 `;
 
@@ -52,13 +53,9 @@ const FilledButton = styled(BaseButton)`
 export function Button(props: IButtonProps) {
   const { theme, text, className } = props;
 
-  if (theme === "filled")
-    return <FilledButton className={className}>{text}</FilledButton>;
-  else return <OutlinedButton className={className}>{text}</OutlinedButton>;
-
-  //   return (
-  //     <button className="bg-violet-500 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ...">
-  //       Save changes
-  //     </button>
-  //   );
+  return theme === "filled" ? (
+    <FilledButton className={className}>{text}</FilledButton>
+  ) : (
+    <OutlinedButton className={className}>{text}</OutlinedButton>
+  );
 }
