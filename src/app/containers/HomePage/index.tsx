@@ -3,6 +3,8 @@ import tw from "twin.macro";
 import { Navbar } from "../../components/NavBar/inex";
 import { TopSection } from "./topSection";
 import { BookCard } from "../../components/BookCard";
+import { Marginer } from "../../components/Marginer";
+import BookingSteps from "./bookingSteps";
 
 const PageContainer = styled.div`
   ${tw`
@@ -41,8 +43,11 @@ export function HomePage() {
     <PageContainer>
       <Navbar />
       <TopSection />
+      <Marginer direction="vertical" margin={"4em"} />
       <BookCard />
-      <ul className="divide-y divide-gray-200">
+      <Marginer direction="vertical" margin={"8em"} />
+      <BookingSteps />
+      {/* <ul className="divide-y divide-gray-200">
         {people.map((person) => (
           <li key={person.email} className="py-4 flex">
             <img className="h-10 w-10 rounded-full" src={person.image} alt="" />
@@ -52,7 +57,7 @@ export function HomePage() {
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </PageContainer>
   );
 }
