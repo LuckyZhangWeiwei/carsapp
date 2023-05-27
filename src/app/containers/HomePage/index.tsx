@@ -5,6 +5,7 @@ import { TopSection } from "./topSection";
 import { BookCard } from "../../components/BookCard";
 import { Marginer } from "../../components/Marginer";
 import BookingSteps from "./bookingSteps";
+import AboutUs from "./aboutUs";
 
 const PageContainer = styled.div`
   ${tw`
@@ -47,6 +48,8 @@ export function HomePage() {
       <BookCard />
       <Marginer direction="vertical" margin={"8em"} />
       <BookingSteps />
+      <Marginer direction="vertical" margin="8em" />
+      <AboutUs />
       {/* <ul className="divide-y divide-gray-200">
         {people.map((person) => (
           <li key={person.email} className="py-4 flex">
